@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="timeline,水墨寒时间轴,时光轴,jquery时间轴,jquery timeline,水墨寒,smohan,成都网站建设,成都网站设计,水墨寒WEB工作室,jquery,css3,html5,前端博客,前端技术,css3学习,前端">
+    <meta name="description" content="SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" type="image/ico" href="https://smohan.im/static/img/favicon.ico">
+    <link rel="stylesheet" href="https://smohan.im/static/mo.css">
+    <title>TimeLine - 水墨寒的博客</title>
+    <style>
+        body{background-color: #2e86ef;}
+        .grid-demo-info {
+            text-align: center;
+            padding: 2rem;
+        }
+        .m-demo-title {
+            font-size: 2rem;
+            color: #fff;
+        }
+        .container{
+            position:relative;
+            width:86%;
+            max-width:1280px;
+            min-width:480px;
+            overflow:hidden;
+            margin: 40px auto;
+        }
+        #timeline{
+            position: relative;
+            min-height: 660px;
+            margin-top: 20px;
+        }
+        #timeline .line{
+            width: 2px;
+            height: 0;
+            background-color: #c8c8c8;
+            position: absolute;
+            top: -20px;
+        }
+        #timeline .item{
+            background-color: #fff;
+            overflow: hidden;
+            position: absolute;
+            min-height: 80px;
+            clear: both;
+            visibility: hidden;
+        }
+        #timeline .item .content{
+            padding: 15px;
+            overflow:hidden;
+        }
+        #timeline .item .point,#timeline .item .corner{
+            display: block;
+            position: absolute;
+            z-index: 2;
+        }
+        #timeline .item .point{
+            /*此处涉及CSS3，如需兼容IE6-8，请修改为图片，中间小圆点*/
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            background-color: #fff;
+        }
+        #timeline .item .point:before{
+            /*此处涉及CSS3，如需兼容IE6-8，可忽略，点上的那个绿点，可直接做图片到 point上*/
+            display: block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: #70ca10;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+        #timeline .item.isLeft .corner{
+            top : 27px;
+        }
+        #timeline .item.isLeft .point{
+            top : 30px;
+        }
+        #timeline .item.isRight .corner{
+            top : 37px;
+        }
+        #timeline .item.isRight .point{
+            top : 40px;
+        }
+        #timeline .item .corner{
+            /*此处涉及CSS3，如需兼容IE6-8，请修改为图片，箭头*/
+            border: 12px solid transparent;
+        }
+        #timeline .item.isLeft .corner{
+            border-left-color: #fff;
+            left: 100%;
+        }
+        #timeline .item.isRight .corner{
+            border-right-color: #fff;
+            right: 100%;
+        }
+        #timeline .item img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-demo-info">
+    <h1 class="m-demo-title">TimeLine.js</h1>
+    <p class="m-demo-summary">项目地址：<a href="https://smohan.im/lab/timeline" style="color:#fff;">https://smohan.im/lab/timeline</a></p>
+    <p class="m-demo-summary mt20" style="color: #f1f2f0;">SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。</p>
+</div>
+
+<section class="container">
+    <div id="timeline">
+        <div class="item">
+            <div class="content">
+                <p>SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <p><img src="//img.smohan.net/project/7c9f3b1b5ced0042242f3fa2a19597f2.jpg?imageView2/1/w/640/h/384/interlace/1/q/100" alt="水墨寒的博客"></p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <p><img src="//img.smohan.net/article/9615e13fcf51eae18dc4d40afaa9e0ab.jpg" alt="水墨寒的博客"></p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <p>SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。</p>
+            </div>
+        </div>
+		<div class="item">
+            <div class="content">
+				<h2>我加个标题</h2>
+                <p>5个进程，你没有看错是5个进程！！！而且这几个进程相互守护，无法彻底杀死，十双筷子哟，牢牢抱成团。到目前为止，从来没见过一款应用会起这么多进程。为了知道他为什么要启动这么多进程，我们怀着好奇的心，反编译了蜻蜓的app。结果发现了一些很奇怪的事情。5个进程，你没有看错是5个进程！！！而且这几个进程相互守护，无法彻底杀死，十双筷子哟，牢牢抱成团。到目前为止，从来没见过一款应用会起这么多进程。为了知道他为什么要启动这么多进程，我们怀着好奇的心，反编译了蜻蜓的app。结果发现了一些很奇怪的事情。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <p><img src="//img.smohan.net/project/9107699233c5119b5a904a5cf81451c5.jpg?imageView2/1/w/640/h/384/interlace/1/q/100" alt="水墨寒的博客"></p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <p><img src="//img.smohan.net/project/5807b0d7d9fbb8ff71199154ecf12854.jpg?imageView2/1/w/640/h/384/interlace/1/q/100" alt="水墨寒的博客"></p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <p>5个进程，你没有看错是5个进程！！！而且这几个进程相互守护，无法彻底杀死，十双筷子哟，牢牢抱成团。到目前为止，从来没见过一款应用会起这么多进程。为了知道他为什么要启动这么多进程，我们怀着好奇的心，反编译了蜻蜓的app。结果发现了一些很奇怪的事情。</p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<div class="mo-text-center">
+    <p>Copyright © 2012-2017 Smohan. All Rights Reserved.盗版必究.V.6.1.0.蜀ICP备16016092号-2.</p>
+</div>
+
+<script src="./timeLine.js"></script>
+<script>
+    window.onload = function () {
+        timeLine('#timeline');
+    }
+</script>
+</body>
+</html>
