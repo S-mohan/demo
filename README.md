@@ -4,16 +4,16 @@
 
 ### homepage
 
-[https://s-mohan.github.io/demo/](https://s-mohan.github.io/index.html)
+[https://s-mohan.github.io/demo/](https://s-mohan.github.io/demo/)
 
 #### timeline
 
-[https://s-mohan.github.io/demo/timeline/](https://s-mohan.github.io/demo/timeline/index.html)
+[https://s-mohan.github.io/demo/timeline/](https://s-mohan.github.io/demo/timeline/)
 
 #### smusic
 
-[https://s-mohan.github.io/demo/smusic/](https://s-mohan.github.io/demo/smusic/index.html)
+[https://s-mohan.github.io/demo/smusic/](https://s-mohan.github.io/demo/smusic/)
 
 #### tipsy 
 
-[https://s-mohan.github.io/demo/tipsy/](https://s-mohan.github.io/demo/tipsy/index.html)
+[https://s-mohan.github.io/demo/tipsy/](https://s-mohan.github.io/demo/tipsy/)
