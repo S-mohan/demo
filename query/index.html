@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="smohan">
+  <meta name="homepage" content="https://smohan.net">
+  <meta name="keywords" content="水墨寒,smohan,smohan.net,query,filter,where,sql,group,limit,skip,find">
+  <meta name="description" content="类SQL前端数据查询类库">
+  <title>Query - 水墨寒的博客</title>
+  <link rel="shortcut icon" type="image/ico" href="https://smohan.net/static/img/favicon.ico">
+  <link rel="stylesheet" href="./demo.css">
+</head>
+
+<body>
+  <h1>Query<small>类SQL前端数据查询类库。</small></h1>
+  <p style="text-align: center">项目地址:<a href="https://smohan.net/lab/query" target="_blank">https://smohan.net/lab/query</a></p>
+  <div class="gitbtns">
+    <iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=query&type=star&count=true" frameborder="0" scrolling="0"
+      height="20px"></iframe>
+    <iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=query&type=fork&count=true" frameborder="0" scrolling="0"
+      height="20px"></iframe>
+  </div>
+  <article class="row">
+    <section class="cell">
+      <h3>Result</h3>
+      <ul id="result">
+        <!-- post items -->
+      </ul>
+    </section>
+    <section class="cell">
+      <h3>Sql</h3>
+      <pre id="code"></pre>
+
+    </section>
+    <section class="cell">
+      <h3>Query</h3>
+      <form onsubmit="return false" method="post">
+        <label>
+          <h5>where/whereOr</h5>
+          <input type="checkbox" name="where" value=".where('count.comments', 'gt', 0)">comments > 0</label>
+        <br/>
+        <label>
+          <input type="checkbox" name="where" value=".where('copyright.author', 'neq', 'smohan')">author !== 'smohan'
+        </label>
+        <br/>
+        <label>
+          <input type="checkbox" name="where" value=".where([['title', 'like', 'javascript'], ['tags', 'like', 'javascript', 'or']])">title or tags like `javascript`</label>
+        <br/>
+        <br/>
+        <h5>sort</h5>
+        <label>
+          <input type="radio" name="sort" value="" checked>null</label>
+        <label>
+          <input type="radio" name="sort" value=".sort('createTime', 'desc')">createTime desc ↓</label>
+        <label>
+          <input type="radio" name="sort" value=".sort('createTime', 'asc')">createTime asc ↑</label>
+        <label>
+          <input type="radio" name="sort" value=".sort('title', 'desc')">title desc ↓</label>
+        <label>
+          <input type="radio" name="sort" value=".sort('title', 'asc')">title asc ↑</label>
+        <br/>
+        <br/>
+        <h5>skip</h5>
+        <label>
+          <input type="number" min="0" step="1" name="skip" value="0">
+        </label>
+        <br/>
+        <br/>
+        <h5>limit</h5>
+        <label>
+          <input type="number" min="1" step="1" max="10" name="limit" value="26">
+        </label>
+        <br/>
+        <br/>
+        <h5>group</h5>
+        <label>
+          <input type="radio" name="group" value="" checked> null
+        </label>
+        <br/>
+        <label>
+          <input type="radio" name="group" value=".group('category.name')"> group by category.name
+        </label>
+        <br/>
+        <label>
+          <input type="radio" name="group" value=".to('createTime', 'date', {args: ['yy-MM'], new: 'mouth'}).group('$mouth')"> group by createTime(yy-MM)
+        </label>
+        <br/>
+        <label>
+          <input type="radio" name="group" value=".group('copyright.author')"> group by author
+        </label>
+        <br/>
+        <br/>
+        <button type="button" id="search" class="submit">search</button>
+        <button type="reset" id="reset" class="reset">reset</button>
+      </form>
+    </section>
+  </article>
+
+  <!-- template 1 -->
+  <script type="text/template" id="tpl-post">
+    <li>
+        <h4 class="item-title">
+          <a>{title}</a>
+          <time>{createTime}</time>
+        </h4>
+        <div class="item-info">
+          <span>author：<strong>{author}</strong></span>
+          <span>comments: <strong>{comments}</strong></span>
+          <span>tags: <strong>{tags}</strong></span>
+        </div>
+      </li>
+  </script>
+
+
+  <!-- template 2 -->
+  <script type="text/template" id="tpl-group">
+    <li>
+        <h4 class="item-title">
+          <a>{id}</a>
+          <time>{count}</time>
+        </h4>
+      </li>
+  </script>
+
+  <script src="./query.js"></script>
+  <script src="./data.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

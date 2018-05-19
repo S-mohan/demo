@@ -1,0 +1,142 @@
+body {
+  padding: 10px;
+  margin: 0;
+  font: 14px / 1.5 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+}
+
+h1 small {
+  font-size: 18px;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  border: 1px solid #ccc;
+  margin: 10px;
+  font-size: 0;
+}
+
+.cell {
+  width: 33.333%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  border-left: 1px solid #ccc;
+  margin-left: -1px;
+  padding: 10px;
+  font-size: 14px;
+  height: 760px;
+  overflow-y: auto;
+}
+
+.cell ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cell li {
+  line-height: 20px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cell li .item-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.cell li .item-title a {
+  color: royalblue;
+}
+
+.cell li .item-title time {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
+
+.cell li .item-info {
+  margin-top: 5px;
+}
+
+.cell li .item-info span:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+.cell li .item-info span strong {
+  font-weight: bold;
+}
+
+.cell button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.cell button.submit {
+  background: rgb(73, 155, 234);
+  background: -moz-linear-gradient(top, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+  background: linear-gradient(to bottom, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+  color: #fff;
+  border: 1px solid rgba(32, 124, 229, 1);
+}
+
+.cell button.reset {
+  background: rgb(254, 255, 255);
+  background: -moz-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(221, 241, 249, 1) 35%, rgba(160, 216, 239, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(221, 241, 249, 1) 35%, rgba(160, 216, 239, 1) 100%);
+  background: linear-gradient(to bottom, rgba(254, 255, 255, 1) 0%, rgba(221, 241, 249, 1) 35%, rgba(160, 216, 239, 1) 100%);
+  border: 1px solid rgba(160, 216, 239, 1);
+}
+
+.cell h3 {
+  font-size: 18px;
+  line-height: 1;
+  margin: 0 0 10px 0;
+}
+
+.cell h5 {
+  color: royalblue;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.cell label {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  color: #333;
+}
+
+.cell pre {
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+
+.gitbtns {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.gitbtns iframe {
+  display: inline;
+  width: auto;
+  max-width: 120px;
+}
