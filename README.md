@@ -1,10 +1,14 @@
 # demo
 
-> smohan.im(net) 博客上涉及到的demo
+> smohan.net 博客上涉及到的demo
 
 ### homepage
 
 [https://s-mohan.github.io/demo/](https://s-mohan.github.io/demo/)
+
+#### query
+
+[https://s-mohan.github.io/demo/query/](https://s-mohan.github.io/demo/query/)
 
 #### timeline
 
