@@ -13,14 +13,24 @@
 </head>
 
 <body>
-  <h1>Query<small>类SQL前端数据查询类库。</small></h1>
-  <p style="text-align: center">项目地址:<a href="https://smohan.net/lab/query" target="_blank">https://smohan.net/lab/query</a></p>
-  <div class="gitbtns">
-    <iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=query&type=star&count=true" frameborder="0" scrolling="0"
-      height="20px"></iframe>
-    <iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=query&type=fork&count=true" frameborder="0" scrolling="0"
-      height="20px"></iframe>
-  </div>
+  <header class="demo-head">
+    <h1>Query
+      <small>类SQL前端数据查询类库</small>
+    </h1>
+    <p style="text-align: center">项目地址:
+      <a href="https://smohan.net/lab/query" target="_blank">https://smohan.net/lab/query</a>
+    </p>
+    <div class="gitbtns">
+      <iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=query&type=star&count=true" frameborder="0" scrolling="0"
+        height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=query&type=fork&count=true" frameborder="0" scrolling="0"
+        height="20px"></iframe>
+    </div>
+    <div class="demo-groups">
+      <a href="./index.html" class="active">example1：SQL组装</a>
+      <a href="./full.html">example2：数据列表</a>
+    </div>
+  </header>
   <article class="row">
     <section class="cell">
       <h3>Result</h3>
@@ -46,8 +56,7 @@
         <br/>
         <label>
           <input type="checkbox" name="where" value=".where([['title', 'like', 'javascript'], ['tags', 'like', 'javascript', 'or']])">title or tags like `javascript`</label>
-        <br/>
-        <br/>
+        <hr/>
         <h5>sort</h5>
         <label>
           <input type="radio" name="sort" value="" checked>null</label>
@@ -59,20 +68,17 @@
           <input type="radio" name="sort" value=".sort('title', 'desc')">title desc ↓</label>
         <label>
           <input type="radio" name="sort" value=".sort('title', 'asc')">title asc ↑</label>
-        <br/>
-        <br/>
+          <hr/>
         <h5>skip</h5>
         <label>
           <input type="number" min="0" step="1" name="skip" value="0">
         </label>
-        <br/>
-        <br/>
+        <hr/>
         <h5>limit</h5>
         <label>
           <input type="number" min="1" step="1" max="10" name="limit" value="26">
         </label>
-        <br/>
-        <br/>
+        <hr/>
         <h5>group</h5>
         <label>
           <input type="radio" name="group" value="" checked> null
@@ -89,7 +95,6 @@
         <label>
           <input type="radio" name="group" value=".group('copyright.author')"> group by author
         </label>
-        <br/>
         <br/>
         <button type="button" id="search" class="submit">search</button>
         <button type="reset" id="reset" class="reset">reset</button>
